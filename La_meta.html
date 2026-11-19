@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="es"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Una meta juntos</title>
+<style>
+*{box-sizing:border-box}body{margin:0;min-height:100svh;display:grid;place-items:center;background:#fbf4e7;color:#49362f;font-family:"DM Sans",system-ui,sans-serif;padding:18px}main{width:min(100%,680px);text-align:center}h1,h2{font:italic 500 clamp(34px,7vw,58px)/1.1 Georgia,serif;margin:.3em 0 .6em}.scene{position:relative;overflow:hidden;isolation:isolate;border:1px solid #bdab92;border-radius:48% 48% 20px 20px / 12% 12% 20px 20px;background:linear-gradient(#ffd9bc,#fff1d3 62%,#c2cc95 62%,#aab881 75%,#cd9c79 75%);aspect-ratio:1.48}.sun{position:absolute;top:12%;left:15%;width:16%;aspect-ratio:1;border-radius:50%;background:#fff4ce;box-shadow:0 0 45px #fff4ce}.hill{position:absolute;bottom:30%;left:-14%;width:90%;height:29%;border-radius:60% 70% 0 0;background:#aaba92;transform:rotate(4deg)}.hill.far{left:50%;bottom:35%;background:#bdc9a7;transform:rotate(-8deg)}.track{position:absolute;inset:74% 0 0;background:repeating-linear-gradient(174deg,#d7aa87 0 34px,#f0d4ad 35px 37px,#d7aa87 38px 67px)}.gate{position:absolute;left:65%;top:35%;width:25%;height:49%;border-inline:5px solid #987155}.flag{background:#fff4da;border-block:2px solid #98594f;color:#964d47;font:bold clamp(12px,3vw,21px) Georgia;letter-spacing:.13em;padding:4px}.ribbon{position:absolute;left:65%;top:66%;width:25%;height:3%;z-index:3;display:flex;pointer-events:none}.ribbon i{width:50%;background:#c95559;border-block:1px solid #a83d48;transform-origin:left;transition:transform .32s}.ribbon i+i{transform-origin:right}.broken i{transform:rotate(64deg)}.broken i+i{transform:rotate(-64deg)}.bear{position:absolute;left:15%;bottom:16%;width:26%;border:none;background:none;padding:0;cursor:pointer;z-index:2;color:inherit;touch-action:manipulation}.bear svg{display:block;width:100%;overflow:visible;animation:bob .38s infinite alternate ease-in-out}.arm,.leg{transform-box:fill-box;transform-origin:50% 12%;animation:stride .38s infinite alternate ease-in-out}.back{animation-direction:alternate-reverse}@keyframes bob{to{transform:translateY(-5%) rotate(3deg)}}@keyframes stride{from{transform:rotate(-22deg)}to{transform:rotate(24deg)}}.dash{left:79%;transition:left 1.4s ease-in}.hint{font-size:15px}.paper{border:1px solid #bba58c;background:#fffaf0;color:inherit;text-align:left;padding:30px;width:min(86%,410px);border-radius:6px;box-shadow:0 18px 65px #49362f35}.paper::backdrop{background:#46342865}.paper h2{font-size:34px}.paper p{line-height:1.7;white-space:pre-line}.again{border:0;background:#764741;color:white;border-radius:24px;padding:11px 20px;cursor:pointer}button:focus-visible{outline:3px solid #473a77;outline-offset:4px}@media(prefers-reduced-motion:reduce){.bear svg,.arm,.leg{animation:none}.dash,.ribbon i{transition:none}}
+.paper{max-height:82vh;max-height:82svh;overflow-y:auto}.paper article:focus{outline:none}
+.cloud{position:absolute;width:15%;height:4%;border-radius:100px;background:#fff9ed}
+.cloud::before,.cloud::after{content:"";position:absolute;bottom:12%;border-radius:50%;background:inherit;width:45%;aspect-ratio:1;left:14%}
+.cloud::after{width:35%;left:49%}
+.cloud.one{top:33%;left:4%}.cloud.two{top:21%;left:44%;width:19%}.cloud.three{top:30%;left:80%;width:12%}
+.paper{padding-inline:36px;background-image:var(--flowers),var(--flowers);background-position:3px top,right 3px top;background-repeat:repeat-y;background-size:21px 80px}
+:root{--flowers:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2090%22%3E%3Cpath%20d%3D%22M12%200Q21%2023%2012%2045T12%2090%22%20fill%3D%22none%22%20stroke%3D%22%2397a57d%22%2F%3E%3Cpath%20d%3D%22M15%2034q-11-1-12-11%2010%201%2012%2011m-5%2037q12-2%2012-13-10%203-12%2013%22%20fill%3D%22%23a8b78c%22%2F%3E%3Cg%20transform%3D%22translate%2813%2017%29%22%3E%3Cellipse%20cy%3D%22-4.3%22%20rx%3D%223.7%22%20ry%3D%225%22%20fill%3D%22%23efa6b2%22%20transform%3D%22rotate%280%29%22%2F%3E%3Cellipse%20cy%3D%22-4.3%22%20rx%3D%223.7%22%20ry%3D%225%22%20fill%3D%22%23db889a%22%20transform%3D%22rotate%2872%29%22%2F%3E%3Cellipse%20cy%3D%22-4.3%22%20rx%3D%223.7%22%20ry%3D%225%22%20fill%3D%22%23f5bbc6%22%20transform%3D%22rotate%28144%29%22%2F%3E%3Cellipse%20cy%3D%22-4.3%22%20rx%3D%223.7%22%20ry%3D%225%22%20fill%3D%22%23da879a%22%20transform%3D%22rotate%28216%29%22%2F%3E%3Cellipse%20cy%3D%22-4.3%22%20rx%3D%223.7%22%20ry%3D%225%22%20fill%3D%22%23f0a6b3%22%20transform%3D%22rotate%28288%29%22%2F%3E%3Ccircle%20r%3D%222.3%22%20fill%3D%22%23dfaf66%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E")}</style>
+<main><h1>Una meta juntos</h1><div class="scene"><div class="sun"></div><span aria-hidden="true" class="cloud one"></span><span aria-hidden="true" class="cloud two"></span><span aria-hidden="true" class="cloud three"></span><div class="hill far"></div><div class="hill"></div><div class="track"></div><div class="gate"><div class="flag">META</div></div>
+<button class="bear" aria-label="Tocar al osito para cruzar la meta"><svg viewBox="0 0 120 150" aria-hidden="true"><g fill="#986445" stroke="#724a37" stroke-width="3"><rect class="leg back" x="38" y="105" width="22" height="36" rx="11"/><rect class="leg" x="63" y="106" width="23" height="36" rx="11"/><ellipse cx="59" cy="91" rx="31" ry="35"/><circle cx="33" cy="32" r="14"/><circle cx="84" cy="29" r="13"/></g><g fill="#e4ae89"><circle cx="33" cy="32" r="7"/><circle cx="84" cy="29" r="6"/></g><path d="M31 79Q57 91 86 77L92 106Q61 119 27 106Z" fill="#ad5455"/><path d="M34 84l-7 17" class="arm back" stroke="#986445" stroke-width="16" stroke-linecap="round"/><rect x="52" y="89" width="23" height="17" rx="3" fill="#fff2d8"/><text x="63" y="102" text-anchor="middle" fill="#844d49" font-size="13" font-family="Georgia">♥</text><circle cx="60" cy="51" r="34" fill="#b7825c" stroke="#724a37" stroke-width="3"/><ellipse cx="76" cy="62" rx="18" ry="13" fill="#ecc8a1"/><g fill="#49372e"><circle cx="57" cy="49" r="3"/><circle cx="82" cy="47" r="3"/><ellipse cx="78" cy="57" rx="5" ry="3.5"/></g><path d="M78 60q0 9-8 6" fill="none" stroke="#644536" stroke-width="2"/><path class="arm" d="M80 85q7 12 17 1" fill="none" stroke="#b7825c" stroke-width="14" stroke-linecap="round"/></svg></button><div class="ribbon"><i></i><i></i></div></div><p class="hint">Tocá al osito para que cruce la meta ♡</p></main>
+<dialog class="paper" aria-label="Carta de Julio"><article tabindex="-1" autofocus><p>Buenos días mi pastelitoooo hermoso, espero que hayas amanecido muy bien, que hayas descansado, sobre todo que Dios te regale un día muy lindo hoy.💗</p><p>Te escribo esto para decirte que estoy muy orgulloso de ti, un año más de la U culminado, y un año menos para lograr el objetivo final, ayer volvimos a llegar al final de la meta donde cada vez estás más cerca de terminar la carrera, quiero que sepas que estoy muy pero muy orgulloso de ti, admiro lo fuerte que eres, como siempre pero siempre sales con las cosas, la dedicación que tienes para estudiar, para hacer tus tareas, para salir muy bien en todo, te admiro mucho, sos la mejor, y creeme que me has motivado a ser mejor, gracias cielo, quiero que sepas que yo siempre te ayudaré en todo, siempre, nos tenemos, siempre va a ser así, pero ahora celebro un año más terminado y primero Dios sé que todo nos va a ir muy bien, confío en que Dios tiene muchas cosas bonitas para nosotros.💗</p><p>Así que felicidades mi pastelito, estoy muy orgulloso de ti, siempre serás mi bebé, y siempre voy a cuidarte, Te Quiero mi nubecita.♥️</p><p>"Dios es nuestro amparo y fortaleza,Nuestro pronto auxilio en las tribulaciones.
+Salmos 46:1".🤍</p></article><p>Con amor,<br>Julio ♡</p><button class="again">Volver a correr</button></dialog>
+<script>
+const bear=document.querySelector('.bear'), ribbon=document.querySelector('.ribbon'), letter=document.querySelector('dialog');
+let audio;
+function chime(notes) {
+ if (!audio || audio.state !== 'running') return;
+ notes.forEach((frequency, index) => {
+  const start = audio.currentTime + index * 0.14;
+  const bell = audio.createOscillator();
+  const volume = audio.createGain();
+  bell.frequency.value = frequency;
+  volume.gain.setValueAtTime(0.0001, start);
+  volume.gain.exponentialRampToValueAtTime(0.06, start + 0.018);
+  volume.gain.exponentialRampToValueAtTime(0.0001, start + 0.46);
+  bell.connect(volume).connect(audio.destination);
+  bell.start(start);
+  bell.stop(start + 0.47);
+  bell.onended = () => { bell.disconnect(); volume.disconnect(); };
+ });
+}
+async function touchSound() {
+ try {
+  const Context = window.AudioContext || window.webkitAudioContext;
+  if (!Context) return;
+  audio ||= new Context();
+  await audio.resume();
+  chime([523.25, 659.25]);
+ } catch { /* La animación también funciona en silencio. */ }
+}
+let running=false;
+bear.onclick=()=>{
+ if(running)return;
+ running=true;
+ touchSound();
+ const reduced=matchMedia('(prefers-reduced-motion: reduce)').matches;
+ bear.classList.add('dash');
+ setTimeout(()=>{ ribbon.classList.add('broken'); chime([783.99]); },reduced?0:1100);
+ setTimeout(()=>{ letter.showModal(); letter.scrollTop=0; chime([659.25, 783.99, 1046.5]); },reduced?100:1750);
+};
+document.querySelector('.again').onclick=()=>letter.close();
+letter.onclose=()=>{
+ bear.classList.remove('dash');
+ ribbon.classList.remove('broken');
+ running=false;
+ bear.focus();
+};
+</script></html>
